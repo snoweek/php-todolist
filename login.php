@@ -12,9 +12,6 @@ if(isset($_SESSION['user_id'])){
 <title>登陆页面</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script type="text/javascript" src="./js/login.js"></script>
-
-
-
 </head>
     <body>
         <div class="container">

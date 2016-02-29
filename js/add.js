@@ -13,7 +13,8 @@ $(function(){
 			option.dataType="text";
 			option.type="get";
 			option.url="list.php";
-			option.success=function(response){
+			option.success=function(json){
+				var arr=(eval(json_message)).register;
 				if(response=="success"){
 					$("span").text("添加成功");
 				}else if(response=="fail"){

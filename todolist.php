@@ -8,37 +8,58 @@
 	function register($username,$password,$email){
 		$dbc=connect_mysql();		
 	    if ($dbc){	       
-	        $q="insert into usermessage (name,password,email)values(\"$username\",\"$password\",\"email\")";
-	        $r=mysqli_query($dbc,$q);
-	        if($r){
-	            return'success';
+	        $q='insert into usermessage(name,password,email)values(?,?,?)';
+    		$stmt=mysqli_prepare($dbc,$q);
+   		    mysqli_stmt_bind_param($stmt,'sss',$name,$password,$email);
+    		$name=$username;
+    		$password=$password;
+    		$email=$email;
+    		mysqli_stmt_execute($stmt);
+	        if(mysqli_stmt_affected_rows($stmt)==1){
+	        	$message['register']='success';
+				$json_message=json_encode($message);
+	            return $json_message;
 	        }else{
-	            return'system';
-	        }
-        	
-    	mysql_close($dbc); 	   
+	            $message['register']='system';
+				$json_message=json_encode($message);
+	            return $json_message;
+	        }   
+	       	mysqli_stmt_close($stmt);   	
+    		mysqli_close($dbc); 	   
 	    }else{
 	    	die('Could not connect: ' . mysql_error());
 	    }
 	}
 	function login($username,$password){
 		session_start(); 
-		$dbc=connect_mysql();			
-	    if ($dbc){	                            
-            $q="select user_id from usermessage where password='$password' and name='$username' ";
-            $r=mysqli_query($dbc,$q); 
-            if(mysqli_num_rows($r)==0){
-            	return "password error";
-            }else{
-            	while($row=mysqli_fetch_array($r,MYSQLI_ASSOC)){
-                	$user_id=$row['user_id'];                 
+		$dbc=connect_mysql();	
+		$user_id;
+	    if ($dbc){
+	    	$q='select user_id from usermessage where name=? and password=?';
+    		$stmt=mysqli_prepare($dbc,$q);
+   		    mysqli_stmt_bind_param($stmt,'ss',$name,$password);
+    		$name=$username;
+    		$password=$password;
+    		mysqli_stmt_execute($stmt);
+    		mysqli_stmt_store_result($stmt); 
+    		mysqli_stmt_bind_result($stmt,$user_id);      
+	        if(mysqli_stmt_affected_rows($stmt)==1){
+	            while(mysqli_stmt_fetch($stmt)){
+                	$user_id=$user_id;               
            		} 
-            $_SESSION['username']=$username;
-            $_SESSION['user_id']=$user_id; 
-            $_SESSION['password']=$password;
-            return "login success";
-            }                                                                     
-    		mysql_close($dbc); 	   
+	            $_SESSION['username']=$username;
+	            $_SESSION['user_id']=$user_id; 
+	            $_SESSION['password']=$password;
+	            $message['login']='login success';
+				$json_message=json_encode($message);
+	            return $json_message;
+	        }else{
+	        	$message['login']='password error';
+				$json_message=json_encode($message);
+	            return $json_message;
+	        } 
+ 			mysqli_stmt_close($stmt);   	
+    		mysqli_close($dbc);             
 	    }else{
 	    	die('Could not connect: ' . mysql_error());
 	    }
@@ -46,22 +67,30 @@
 
 	function check_name($username){		
 		$dbc=connect_mysql();			
-	    if ($dbc){	                            
-            $q="select user_id from usermessage where name='$username' ";
-            $r=mysqli_query($dbc,$q); 
-            if(mysqli_num_rows($r)==0){
-            	return "name no exit";
-            }else{
-            return "name exit";
-            }                                                                     
-    		mysql_close($dbc); 	   
+	    if ($dbc){	
+	    $q='select * from usermessage where name=?';
+    	$stmt=mysqli_prepare($dbc,$q);
+    	mysqli_stmt_bind_param($stmt,'s',$name);
+    	$name=$username;
+    	mysqli_stmt_execute($stmt);
+        mysqli_stmt_store_result($stmt);                          
+        if(mysqli_stmt_affected_rows($stmt)==1){
+           	$message['check_name']='name exit';
+			$json_message=json_encode($message);
+	        return $json_message;
+        }else{
+            $message['check_name']='name no exit';
+			$json_message=json_encode($message);
+	        return $json_message;
+        } 
+        mysqli_stmt_close($stmt);   	                                                                
+    	mysql_close($dbc); 	   
 	    }else{
 	    	die('Could not connect: ' . mysql_error());
 	    }
-
 	}
-	function logout(){
-		session_start();		
+
+	function logout(){		
     	session_destroy();
     	setcookie('phpsessid','',time()-3600);
 	}
@@ -70,47 +99,86 @@
 		session_start(); 
 		$password=$_SESSION['password'];
 		if($password!=$old_password){
-			return "password wrong";
+			$message['check_password']='password wrong';
+				$json_message=json_encode($message);
+	            return $json_message;
 		}else{
-			return "password correct";
-		}
-
+			$message['check_name']='password crrect';
+				$json_message=json_encode($message);
+	            return $json_message;
+		} 
 	}
 	function changepassword($new_password){
 		session_start(); 
-		$dbc=connect_mysql();			
-	    if ($dbc){	                            
-    	 	$q="update usermessage set password='$new_password' where user_id={$_SESSION['user_id']}";
-    	 	$r=mysqli_query($dbc,$q);
-    	 	if($r){
-    	 		echo"change success";
-    	 	}else{
-    	 		echo"change fail";
-    	 	}	                                                    
-    		mysql_close($dbc); 	   
+		$dbc=connect_mysql();
+		$session_user_id=$_SESSION['user_id'];			
+	    if ($dbc){
+	    	$q='update usermessage set password=? where user_id=?';
+    		$stmt=mysqli_prepare($dbc,$q);
+   		    mysqli_stmt_bind_param($stmt,'si',$password,$user_id);
+    		$password=$new_password;
+    		$user_id=$session_user_id;
+    		mysqli_stmt_execute($stmt);
+	        if(mysqli_stmt_affected_rows($stmt)==1){
+
+	        	$message['changepassword']='change success';
+				$json_message=json_encode($message);
+	            return $json_message;
+	        }else{
+	        	$message['changepassword']='system';
+				$json_message=json_encode($message);
+	            return $json_message;
+	        }   
+	        mysqli_stmt_close($stmt);   	
+    		mysqli_close($dbc); 	   
 	    }else{
 	    	die('Could not connect: ' . mysql_error());
 	    }
+	}
 
-	}
-	function show_list($user_id){
+	function show_list($user_id_from_user){
 		$dbc=connect_mysql();
-		$q="select content,list_id from listmessage where user_id='$user_id'";
-		$s=mysqli_query($dbc,$q);
-		return $s;
+		$q='select content,list_id from listmessage where user_id=?';
+    	$stmt=mysqli_prepare($dbc,$q);
+    	mysqli_stmt_bind_param($stmt,'i',$user_id);
+    	$user_id=$user_id_from_user;
+    	mysqli_stmt_execute($stmt);
+        mysqli_stmt_store_result($stmt); 
+        mysqli_stmt_bind_result($stmt,$content,$list_id);           
+        while(mysqli_stmt_fetch($stmt)){
+           	$list['content']=$content;
+           	$list['list_id']=$list_id;
+            $list_merge[]=$list;
+        }
+        list_json=json_encode($list_merge);
+        return $list_json;
+        mysqli_stmt_close($stmt);   	                                                                
+    	mysql_close($dbc); 	  
 	}
-	function add_list($content){
+
+	function add_list($form_content){
 		session_start(); 
-		$user_id=$_SESSION['user_id'];
+		$user_id_from_session=$_SESSION['user_id'];
 		$dbc=connect_mysql();
-		$p="insert into listmessage (content ,user_id) values (\"$content\",\"$user_id\")";
-		mysqli_query($dbc,$p);
+		$q='insert into listmessage (content ,user_id) values (?,?)';
+    	$stmt=mysqli_prepare($dbc,$q);
+   		mysqli_stmt_bind_param($stmt,'si',$content,$user_id);
+    	$content=$form_content;
+    	$user_id=$user_id_from_session;
+    	mysqli_stmt_execute($stmt);
+	    mysqli_stmt_close($stmt);   	
+    	mysqli_close($dbc); 	   
 	}
-	function delete_list($list_id){		
+
+
+	function delete_list($form_list_id){		
 		$dbc=connect_mysql();
-		$q="delete from listmessage where list_id='$list_id'";
-    	mysqli_query($dbc,$q);
+    	$q='delete from listmessage where list_id=?';
+    	$stmt=mysqli_prepare($dbc,$q);
+   		mysqli_stmt_bind_param($stmt,'i',$list_id);
+    	$list_id=$form_list_id;
+    	mysqli_stmt_execute($stmt);
+	    mysqli_stmt_close($stmt);   	
+    	mysqli_close($dbc); 	   
 	}
 ?>
-
-

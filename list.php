@@ -4,7 +4,7 @@ require "./todolist.php";
 session_start(); 
 $count=0;
 $user_id=$_SESSION['user_id'];
-$result=show_list($user_id);
+$list_json=show_list($user_id);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
@@ -33,24 +33,48 @@ $result=show_list($user_id);
                         <td>操作</td>
                         <td></td>                               
                     </tr>
-                    <tr>
+                    
                     <?php 
-                        while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){               
-                            echo'<tr>
-                                    <td>'.++$count.'</td>
-                                    <td>'.$row['content'].'</td>
+                        $list_json=json_decode($list_json);
+                       
+                          foreach($list_json as $key => $value) {
+                            if($value) {
+                                echo'<tr><td>'.++$count.'</td>';
+                          
+                                echo'
+                                    <td>'.$value->content.'</td>
                                     <td>
                                         <div class="dropdown">
                                             <span class="glyphicon glyphicon-asterisk dropdown-toggle btn" data-toggle="dropdown"></span> 
                                             <ul class="dropdown-menu" >
                                                 <li>
-                                                    <a href="list_handle.php?act=delete&list_id='.$row['list_id'].'">删除计划</a>
+                                                    <a href="list_handle.php?act=delete&list_id='.$value->list_id.'">删除计划</a>
                                                 </li>                                
                                             </ul>
                                         </div>  
-                                    </td>
-                                </tr>';
+                                    </td></tr>';
+                            }
+                            
                         }
+                       /* foreach($result as $key=>$list){                         
+                            echo'<tr><td>'.++$count.'</td>';
+                            foreach($list as $k){
+                                echo'
+                                    <td>'.$k[content].'</td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <span class="glyphicon glyphicon-asterisk dropdown-toggle btn" data-toggle="dropdown"></span> 
+                                            <ul class="dropdown-menu" >
+                                                <li>
+                                                    <a href="list_handle.php?act=delete&list_id='.$k[list_id].'">删除计划</a>
+                                                </li>                                
+                                            </ul>
+                                        </div>  
+                                    </td>';
+                            }
+                            echo'</tr>';
+                         }   */         
+                            
                     ?>                                            
                 </table>                   
             </div>

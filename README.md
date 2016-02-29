@@ -1,4 +1,5 @@
 # php-todolist
+进入todolist的目录
 
 echo "# php-todolist" >> README.md
 git init
@@ -12,4 +13,4 @@ git push -u origin master
 
 git add .#
 git commit -m "first commit"
-git push -u origin master# php-todolist
+git push -u origin master

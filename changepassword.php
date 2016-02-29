@@ -33,9 +33,7 @@ if(isset($_SESSION['user_id'])){
                             <br>
                                 <div><span id="old_password_error" style="color: red;"></span></div>   
                             </div>
-                        </div>
-                        
-                        
+                        </div>                       
                         <div class="row">
                             <div class="col-lg-6 col-sm-6 col-sm-6">
                                 <div class="input-group input-lg">
@@ -59,9 +57,7 @@ if(isset($_SESSION['user_id'])){
                             <br>
                                 <div><span id="confirm_password_error" style="color: red;"></span></div>   
                             </div>
-                        </div>
-                        
-                                                                                                        
+                        </div>                                                                                                                               
                         <div class="row">
                             <div class="col-lg-6 col-sm-6 col-sm-6">
                                 <div align="center">
@@ -72,8 +68,7 @@ if(isset($_SESSION['user_id'])){
                         </div>
                         <div class="row">                           
                             <div><span id="change_password_error" style="color: red;" align="center"></span></div>
-                        </div>                          
-                        
+                        </div>                                                 
                     </form>
                 </div>
             </div>  

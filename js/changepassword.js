@@ -7,10 +7,11 @@ $(function(){
 					$("#old_password_error").text(" ");
 					$.ajax({
 			            type:"post",
-			            dataType:"text",
+			            dataType:"json",
 			            url: "/todolist/changepassword_handle.php?act=check_password",    
 			            data: {old_password:old_password}, 
-			            success: function(data){ 
+			            success: function(json_message){ 
+			            	var data=(eval(json_message)).check_password;
 			            	if(data=="password correct"){
 			            		$("#old_password_error").text("");            				            		
 			            	}else if(data=="password wrong"){
@@ -55,10 +56,11 @@ $(function(){
 					$("#confirm_password_error").text(" ");
 					$.ajax({
 			            type:"post",
-			            dataType:"text",
+			            dataType:"json",
 			            url: "/todolist/changepassword_handle.php?act=changepassword",    
 			            data: {new_password:new_password}, 
-			            success: function(data){ 
+			            success: function(json_message){ 
+			            	var data=(eval(json_message)).changepassword;
 			            	
 			            	if(data=="change success"){
 			            		location.href="/todolist/index.php";	
@@ -67,9 +69,7 @@ $(function(){
 			            	}          	
 			            }	
 				 	});		
-				}
-							
-				
+				}											
 			}
 					
 		});

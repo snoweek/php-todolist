@@ -4,10 +4,11 @@
 				var name=$("#input_name").val().replace(/\s/g,'');//去掉头尾空格
 				$.ajax({
 		            type: "post",
-		            dataType: "text",
+		            dataType: "json",
 		            url: "/todolist/login_handle.php?act=check_name",    
 		            data: {username:name}, 
-		            success: function(data){ 
+		            success: function(json_message){ 
+		            	var data=(eval(json_message)).check_name;  
 		            	if(data=="name exit"){
 		            		$("#span_name_error").text(" ");		            				            		
 		            	}else if(data=="name no exit"){
@@ -24,12 +25,13 @@
 			if(name.length!=0){				 
 				 $.ajax({
 			            type: "post",  
-			            dataType: "text",
+			            dataType: "json",
 			            url: "/todolist/login_handle.php?act=login_user",    
 			            data: {username:name,
 			            		password:password,
 			            		},
-			            success: function(data){ 
+			            success: function(json_message){ 
+			            	var data=(eval(json_message)).login;            			            					        			                    
 			            	if(data=="login success"){
 			            		location.href="/todolist/index.php"			            				            		
 			            	}else if(data=="password error"){
