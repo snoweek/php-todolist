@@ -12,6 +12,7 @@
         if($message->changepassword=="change success"){
             logout();
         }
+        //echo "nvwiopnb";
         echo $json_message;
     }
 ?>

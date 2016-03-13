@@ -1,19 +1,17 @@
 <?php
-session_start(); 
-if(isset($_SESSION['user_id'])){
-    require "./html/login_header.html"; 
-}else{
-    require "./html/no_login_header.html";  
-}
+    session_start(); 
+    if(isset($_SESSION['user_id'])){
+        require "./html/login_header.html"; 
+    }else{
+        require "./html/no_login_header.html";  
+    }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
 <head>
 <title>注册页面</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
- <script type="text/javascript" src="./js/register.js"></script>
-
-
+<script type="text/javascript" src="./js/register.js"></script>
 </head>
     <body>
         <div class="container">
@@ -69,7 +67,7 @@ if(isset($_SESSION['user_id'])){
                             <div class="col-lg-6 col-sm-6 col-sm-6">
                                 <div align="center">
                                     <input type="submit" value="注册" class="btn btn-success"/>
-                                 </div>
+                                </div>
                             </div>                          
                         </div>
                     </form>

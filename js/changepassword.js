@@ -23,13 +23,11 @@ $(function(){
 		});
 		
 		$("#new_password").blur(function(){		
-			var new_password=$("#new_password").val();
-		
+			var new_password=$("#new_password").val();		
 			if(new_password.length<6 || new_password.length>20){
 				$("#new_password_error").text("密码长度应为6-20");
 			}else{
-				$("#new_password_error").text(" ");
-									            																
+				$("#new_password_error").text(" ");									            																
 			}				
 		});
 		$("#confirm_password").blur(function(){		
@@ -39,8 +37,7 @@ $(function(){
 				$("#confirm_password_error").text("两次密码输入不一致");
 			}else{
 				$("#confirm_password_error").text(" ");
-			}
-					
+			}					
 		});
 		$("#changepassword").submit(function(e){	
 			e.preventDefault();
@@ -60,8 +57,7 @@ $(function(){
 			            url: "/todolist/changepassword_handle.php?act=changepassword",    
 			            data: {new_password:new_password}, 
 			            success: function(json_message){ 
-			            	var data=(eval(json_message)).changepassword;
-			            	
+			            	var data=(eval(json_message)).changepassword;				            	
 			            	if(data=="change success"){
 			            		location.href="/todolist/index.php";	
 			            	}else{
@@ -70,12 +66,7 @@ $(function(){
 			            }	
 				 	});		
 				}											
-			}
-					
-		});
-		
-
-		
-				
+			}					
+		});				
 });
   	

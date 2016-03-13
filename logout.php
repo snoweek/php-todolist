@@ -1,6 +1,8 @@
 <?php 
-    require "./todolist.php";  
-    logout();
-    header("Location: ./index.php");          
-    exit; 
+    require "./todolist.php";
+    session_start();  
+    logout(); 
+    header("Location: ./index.php"); 
+    exit;  
+     
 ?>

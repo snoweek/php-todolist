@@ -2,12 +2,12 @@
     function connect_mysql() {
   		$dbc=@mysqli_connect('127.0.0.1', 'root','123456','todolist') 
             or die('could not connect to mysql');
-            mysqli_set_charset($dbc,'utf8');
-            return $dbc; 
+        mysqli_set_charset($dbc,'utf8');
+        return $dbc; 
 	}
 	function register($username,$password,$email){
 		$dbc=connect_mysql();		
-	    if ($dbc){	       
+	    if($dbc){
 	        $q='insert into usermessage(name,password,email)values(?,?,?)';
     		$stmt=mysqli_prepare($dbc,$q);
    		    mysqli_stmt_bind_param($stmt,'sss',$name,$password,$email);
@@ -16,7 +16,7 @@
     		$email=$email;
     		mysqli_stmt_execute($stmt);
 	        if(mysqli_stmt_affected_rows($stmt)==1){
-	        	$message['register']='success';
+	            $message['register']='success';
 				$json_message=json_encode($message);
 	            return $json_message;
 	        }else{
@@ -24,7 +24,7 @@
 				$json_message=json_encode($message);
 	            return $json_message;
 	        }   
-	       	mysqli_stmt_close($stmt);   	
+	        mysqli_stmt_close($stmt);   	
     		mysqli_close($dbc); 	   
 	    }else{
 	    	die('Could not connect: ' . mysql_error());
@@ -90,9 +90,11 @@
 	    }
 	}
 
-	function logout(){		
+	function logout(){	
+  	     
     	session_destroy();
     	setcookie('phpsessid','',time()-3600);
+        
 	}
 	
 	function check_password($old_password){
@@ -100,12 +102,12 @@
 		$password=$_SESSION['password'];
 		if($password!=$old_password){
 			$message['check_password']='password wrong';
-				$json_message=json_encode($message);
-	            return $json_message;
+			$json_message=json_encode($message);
+	        return $json_message;
 		}else{
-			$message['check_name']='password crrect';
-				$json_message=json_encode($message);
-	            return $json_message;
+			$message['check_name']='password correct';
+			$json_message=json_encode($message);
+	        return $json_message;
 		} 
 	}
 	function changepassword($new_password){
@@ -120,7 +122,6 @@
     		$user_id=$session_user_id;
     		mysqli_stmt_execute($stmt);
 	        if(mysqli_stmt_affected_rows($stmt)==1){
-
 	        	$message['changepassword']='change success';
 				$json_message=json_encode($message);
 	            return $json_message;
@@ -150,7 +151,7 @@
            	$list['list_id']=$list_id;
             $list_merge[]=$list;
         }
-        list_json=json_encode($list_merge);
+        $list_json=json_encode($list_merge);
         return $list_json;
         mysqli_stmt_close($stmt);   	                                                                
     	mysql_close($dbc); 	  
