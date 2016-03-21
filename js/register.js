@@ -1,25 +1,25 @@
 $(function(){
-  	var name;
-  	var password;
-  	var email;	
+	var name;
+	var password;
+	var email;	
 	$("#input_name").blur(function(){
 		if($("#input_name").val().length<2||$("#input_name").val().length>20){
 			$("#span_name_error").text("用户名长度必须是2-20位");				
 		}else{
 			name=$("#input_name").val().replace(/\s/g,'');//去掉头尾空格
 			$.ajax({
-			    type: "post",
-			    dataType: "json",
-			    url: "/todolist/register_handle.php?act=check_name",    
-			    data: {username:name}, 
-			    success: function(json_message){ 
-			        var arr=(eval(json_message)).check_name;
-			        if(data=="name exit"){
-			            $("#span_name_error").text("此用户名已经被注册");		            				            		
-			        }else if(data=="name no exit"){
-			            $("#span_name_error").text("");
-			        }			            	
-			    }	
+				type: "post",
+				dataType: "json",
+				url: "/todolist/register_handle.php?act=check_name",    
+				data: {username:name}, 
+				success: function(json_message){ 
+					var arr=(eval(json_message)).check_name;
+					if(data=="name exit"){
+						$("#span_name_error").text("此用户名已经被注册");		            				            		
+				}else if(data=="name no exit"){
+						$("#span_name_error").text("");
+					}			            	
+				}	
 			});													
 		}	
 	});
@@ -46,26 +46,24 @@ $(function(){
 		e.preventDefault();
 		if(name && password && email){				 
 			$.ajax({
-			    type: "post",//使用post方法访问后台  
-			    dataType: "json",//返回json格式的r数据  
-			    url: "/todolist/register_handle.php?act=register_user",//要访问的后=台地址    
-			    data:{ 
-			    	username:name,
-			        password:password,
-			        email:email
-			    },//要发送的数据  
-			    success: function(json_message){ 
-			        var arr=(eval(json_message)).register;
-			        if(data=="success"){
-			            		
-			            location.href="/todolist/index.php"				            				            		
-			        }else if(data=="system"){
-			            ocation.href="/todolist/register.php"	
-			        }			            	
-			    }	
+				type: "post",//使用post方法访问后台  
+				dataType: "json",//返回json格式的r数据  
+				url: "/todolist/register_handle.php?act=register_user",//要访问的后=台地址    
+				data:{ 
+					username:name,
+					password:password,
+						email:email
+				},//要发送的数据  
+				success: function(json_message){ 
+					var arr=(eval(json_message)).register;
+				if(data=="success"){			            		
+						location.href="/todolist/index.php"				            				            		
+					}else if(data=="system"){
+						location.href="/todolist/register.php"	
+					}			            	
+				}	
 			});			
 		}
 			
 	});	
 });
-  	
