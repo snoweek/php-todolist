@@ -108,6 +108,7 @@
             return $json_message;
         } 
     }
+
     function changepassword($new_password){
         session_start(); 
         $dbc=connect_mysql();
@@ -134,9 +135,6 @@
             die('Could not connect: ' . mysql_error());
         }
     }
-
-
-
 
     function show_list($user_id_from_user){
         $dbc=connect_mysql();
@@ -171,8 +169,7 @@
         mysqli_stmt_close($stmt);
         mysqli_close($dbc);
     }
-
-
+    
     function delete_list($form_list_id){
         $dbc=connect_mysql();
         $q='delete from listmessage where list_id=?';
