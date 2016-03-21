@@ -42,6 +42,9 @@ CREATE TABLE `listmessage` (
 listmessage数据库包含三列，list_id用于记录计划的条数，content用于记录计划的内容，
 user_id用于记录用于记录用户注册的顺序。两个表之间以user_id来连接。
 
+##License
+Apache 
+
 
 
 
