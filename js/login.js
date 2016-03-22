@@ -32,11 +32,12 @@ $(function(){
 				success: function(json_message){ 
 					var data=(eval(json_message)).login;
 					if(data=="login success"){
-						location.href="/todolist/index.php";
+						location.href="/todolist/index.php"						
 					}else if(data=="password error"){
 						$("#span_password_error").text("密码错误");
 					}
+				}
 			});			
-		}		
+		}
 	});
 });

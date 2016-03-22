@@ -13,7 +13,7 @@ $(function(){
 				url: "/todolist/register_handle.php?act=check_name",    
 				data: {username:name}, 
 				success: function(json_message){ 
-					var arr=(eval(json_message)).check_name;
+					var data=(eval(json_message)).check_name;
 					if(data=="name exit"){
 						$("#span_name_error").text("此用户名已经被注册");		            				            		
 				}else if(data=="name no exit"){
@@ -55,7 +55,7 @@ $(function(){
 						email:email
 				},//要发送的数据  
 				success: function(json_message){ 
-					var arr=(eval(json_message)).register;
+					var data=(eval(json_message)).register;
 				if(data=="success"){			            		
 						location.href="/todolist/index.php"				            				            		
 					}else if(data=="system"){

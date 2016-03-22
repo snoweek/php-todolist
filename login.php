@@ -1,19 +1,23 @@
-<?php
-session_start();
-if(isset($_SESSION['user_id'])){
-    require "./html/login_header.html"; 
-}else{
-    require "./html/no_login_header.html";  
-}
-?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
 <head>
 <title>登陆页面</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <script type="text/javascript" src="./js/login.js"></script>
+<link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<script  type="text/javascript" src="./bootstrap/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./js/login.js"></script>
 </head>
     <body>
+        <?php
+            session_start();
+            if(isset($_SESSION['user_id'])){
+                require "./html/login_header.html"; 
+            }else{
+                require "./html/no_login_header.html";  
+            }
+        ?>    
         <div class="container">
             <br><br><br><br>
             <h3 align="center">登陆</h3>

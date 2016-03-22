@@ -1,18 +1,22 @@
-<?php
-require "./html/login_header.html";
-require "./todolist.php"; 
-session_start(); 
-$count=0;
-$user_id=$_SESSION['user_id'];
-$list_json=show_list($user_id);
-?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
 <head>
 <title>计划页面</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script  type="text/javascript" src="./bootstrap/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
+    <?php
+        require "./html/login_header.html";
+        require "./todolist.php"; 
+        session_start(); 
+        $count=0;
+        $user_id=$_SESSION['user_id'];
+        $list_json=show_list($user_id);
+    ?>
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-sm-4 col-sm-4">            
@@ -35,12 +39,10 @@ $list_json=show_list($user_id);
                     </tr>
                     
                     <?php 
-                        $list_json=json_decode($list_json);
-                       
-                          foreach($list_json as $key => $value) {
+                        $list_json=json_decode($list_json);                      
+                            foreach($list_json as $key => $value) {
                             if($value) {
-                                echo'<tr><td>'.++$count.'</td>';
-                          
+                                echo'<tr><td>'.++$count.'</td>';                          
                                 echo'
                                     <td>'.$value->content.'</td>
                                     <td>
@@ -53,28 +55,8 @@ $list_json=show_list($user_id);
                                             </ul>
                                         </div>  
                                     </td></tr>';
-                            }
-                            
-                        }
-                       /* foreach($result as $key=>$list){                         
-                            echo'<tr><td>'.++$count.'</td>';
-                            foreach($list as $k){
-                                echo'
-                                    <td>'.$k[content].'</td>
-                                    <td>
-                                        <div class="dropdown">
-                                            <span class="glyphicon glyphicon-asterisk dropdown-toggle btn" data-toggle="dropdown"></span> 
-                                            <ul class="dropdown-menu" >
-                                                <li>
-                                                    <a href="list_handle.php?act=delete&list_id='.$k[list_id].'">删除计划</a>
-                                                </li>                                
-                                            </ul>
-                                        </div>  
-                                    </td>';
-                            }
-                            echo'</tr>';
-                         }   */         
-                            
+                            }                            
+                        }                            
                     ?>                                            
                 </table>                   
             </div>

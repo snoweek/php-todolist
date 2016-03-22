@@ -16,30 +16,32 @@ todolist是一个基于php和mysql的代办清单网站，可以完成以下功�
 
 ##数据库todolist表信息
 如果数据连接信息，例如数据库名或密码发生变化，可以到todolist.php中的connect_mysql()函数中修改。
-* usermessage
+* user
 ```
-CREATE TABLE `usermessage` (
+CREATE TABLE `user` (
   `user_id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
-  `name` text,
-  `password` text,
-  `email` text,
-  PRIMARY KEY (`user_id`)
+  `name` varchar(30) DEFAULT NULL,
+  `password` char(40) DEFAULT NULL,
+  `email` varchar(60) DEFAULT NULL,
+  PRIMARY KEY (`user_id`),
+  UNIQUE KEY `name` (`name`),
+  UNIQUE KEY `email` (`email`)
 )
 ```
-usermessage数据库包含三列，user_id用于记录用户注册的顺序，同时用作主键;name用于记录用户的名称;password用于记录用户的密码。
+表user包含四列，user_id记录用户注册的顺序，同时用作主键;name记录用户的名称;password记录用户的密码;email记录用户的邮箱。
 
-* listmessage
+* list
 
 ```
-CREATE TABLE `listmessage` (
+CREATE TABLE `list` (
   `list_id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
   `content` text,
-  `user_id` mediumint(9) DEFAULT NULL,
+  `user_id` mediumint(8) DEFAULT NULL,
   PRIMARY KEY (`list_id`)
 ) 
 ```
-listmessage数据库包含三列，list_id用于记录计划的条数;content用于记录计划的内容;
-user_id是指这条假话所属的用户。两个表之间以user_id来连接。
+表list包含三列，list_id用于记录计划的条数;content用于记录计划的内容;
+user_id是指这条计划所属的用户。两个表之间以user_id来连接。
 
 ##License
 Apache 

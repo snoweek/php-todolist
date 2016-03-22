@@ -8,7 +8,7 @@
     function register($username,$password,$email){
         $dbc=connect_mysql();           
         if($dbc){
-            $q='insert into usermessage(name,password,email)values(?,?,?)';
+            $q='insert into user(name,password,email)values(?,?,?)';
             $stmt=mysqli_prepare($dbc,$q);
             mysqli_stmt_bind_param($stmt,'sss',$name,$password,$email);
             $name=$username;
@@ -35,7 +35,7 @@
         $dbc=connect_mysql();
         $user_id;
         if($dbc){
-            $q='select user_id from usermessage where name=? and password=?';
+            $q='select user_id from user where name=? and password=?';
             $stmt=mysqli_prepare($dbc,$q);
             mysqli_stmt_bind_param($stmt,'ss',$name,$password);
             $name=$username;
@@ -68,7 +68,7 @@
     function check_name($username){
         $dbc=connect_mysql();
         if ($dbc){	
-            $q='select * from usermessage where name=?';
+            $q='select * from user where name=?';
             $stmt=mysqli_prepare($dbc,$q);
             mysqli_stmt_bind_param($stmt,'s',$name);
             $name=$username;
@@ -114,7 +114,7 @@
         $dbc=connect_mysql();
         $session_user_id=$_SESSION['user_id'];
         if ($dbc){
-            $q='update usermessage set password=? where user_id=?';
+            $q='update user set password=? where user_id=?';
             $stmt=mysqli_prepare($dbc,$q);
             mysqli_stmt_bind_param($stmt,'si',$password,$user_id);
             $password=$new_password;
@@ -138,7 +138,7 @@
 
     function show_list($user_id_from_user){
         $dbc=connect_mysql();
-        $q='select content,list_id from listmessage where user_id=?';
+        $q='select content,list_id from list where user_id=?';
         $stmt=mysqli_prepare($dbc,$q);
         mysqli_stmt_bind_param($stmt,'i',$user_id);
         $user_id=$user_id_from_user;
@@ -160,7 +160,7 @@
         session_start(); 
         $user_id_from_session=$_SESSION['user_id'];
         $dbc=connect_mysql();
-        $q='insert into listmessage (content ,user_id) values (?,?)';
+        $q='insert into list (content ,user_id) values (?,?)';
         $stmt=mysqli_prepare($dbc,$q);
         mysqli_stmt_bind_param($stmt,'si',$content,$user_id);
         $content=$form_content;
@@ -172,7 +172,7 @@
     
     function delete_list($form_list_id){
         $dbc=connect_mysql();
-        $q='delete from listmessage where list_id=?';
+        $q='delete from list where list_id=?';
         $stmt=mysqli_prepare($dbc,$q);
         mysqli_stmt_bind_param($stmt,'i',$list_id);
         $list_id=$form_list_id;
