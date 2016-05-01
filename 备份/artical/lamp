@@ -1,0 +1,44 @@
+所谓lamp，就是指在linux操作系统下搭建apache2 + MySQL +PHP
+1.下载安装apache2
+
+输入：sudo apt-get install apache2
+
+
+
+安装完毕后，在浏览器中输入：localhost
+
+显示如下图，说明安装正确。
+安装完毕后，在浏览器中输入：localhost
+
+2.安装php5
+
+输入：sudo apt-get install php5 
+3.安装MySQL
+
+输入：sudo apt-get install mysql-server
+安装过程中会要求设置Mysql root帐号的密码，设置好了记住。
+4.sudo apt-get install php5-mysql
+5.sudo apt-get install php5 libapache2-mod-php5
+6.sudo chmod -R 777 /var/www/
+  sudo /etc/init.d/mysql restart
+7.进入mysql
+mysql -u root -p
+8. LAMP组件经常使用的几个终端命令
+
+重启 apache：sudo /etc/init.d/apache2 restart
+
+重启mysql：sudo /etc/init.d/mysql restart
+
+配置 php.ini：sudo gedit /etc/php5/apache2/php.ini
+
+配置 apache2.conf：sudo gedit /etc/apache2/apache2.conf
+
+
+ chmod -R 777 /var/www/html
+mysql安装路径
+
+
+
+
+
+

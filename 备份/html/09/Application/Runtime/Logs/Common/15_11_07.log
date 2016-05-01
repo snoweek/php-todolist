@@ -1,0 +1,24 @@
+[ 2015-11-07T16:49:05+08:00 ] 127.0.0.1 /sunyan2015/022/Public/js/jquery-1.7.2.min
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Public
+
+[ 2015-11-07T16:49:13+08:00 ] 127.0.0.1 /sunyan2015/022/Public/js/jquery-1.7.2.min
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Public
+
+[ 2015-11-07T16:49:24+08:00 ] 127.0.0.1 /sunyan2015/022/Public/js/jquery-1.7.2.min
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Public
+
+[ 2015-11-07T16:49:53+08:00 ] 127.0.0.1 /sunyan2015/022/Public/js/jquery-1.7.2.min
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Public
+

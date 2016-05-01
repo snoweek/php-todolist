@@ -1,0 +1,66 @@
+[ 2015-07-12T09:52:52+08:00 ] 127.0.0.1 /sunyan2015/017/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.041145s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.022852s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.023013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+NOTIC: [8] Undefined variable: title D:\Dev Apps\xampp\htdocs\sunyan2015\017\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 5 行.
+NOTIC: [8] Undefined variable: link3 D:\Dev Apps\xampp\htdocs\sunyan2015\017\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 16 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.072358s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.072450s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.009135s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009191s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005042s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005088s ]
+
+[ 2015-07-12T14:02:44+08:00 ] 127.0.0.1 /sunyan2015/017/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001144s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001677s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001780s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+NOTIC: [8] Undefined variable: title D:\Dev Apps\xampp\htdocs\sunyan2015\017\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 5 行.
+NOTIC: [8] Undefined variable: link3 D:\Dev Apps\xampp\htdocs\sunyan2015\017\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 16 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024655s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024708s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000834s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000878s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001137s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001181s ]
+
+[ 2015-07-12T14:29:48+08:00 ] 127.0.0.1 /sunyan2015/017/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000849s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001251s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001321s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000086s ]
+NOTIC: [8] Undefined variable: title D:\Dev Apps\xampp\htdocs\sunyan2015\017\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 5 行.
+NOTIC: [8] Undefined variable: link3 D:\Dev Apps\xampp\htdocs\sunyan2015\017\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 16 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009941s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009991s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000827s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000871s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001121s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001167s ]
+

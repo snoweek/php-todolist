@@ -1,0 +1,450 @@
+[ 2015-08-22T09:01:07+08:00 ] 127.0.0.1 /sunyan2015/017/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.016210s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009025s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009222s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000257s ]
+NOTIC: [8] Undefined variable: title D:\Dev Apps\xampp\htdocs\sunyan2015\017\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 5 行.
+NOTIC: [8] Undefined variable: link3 D:\Dev Apps\xampp\htdocs\sunyan2015\017\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 16 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.067522s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067676s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.016652s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.016824s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.017074s ]
+INFO: [ app_end ] --END-- [ RunTime:0.017325s ]
+
+[ 2015-08-22T09:01:12+08:00 ] 127.0.0.1 /sunyan2015/017/index.php/Home/Index/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000477s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000796s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000858s ]
+SQL: SHOW COLUMNS FROM `usermessage` [ RunTime:0.2014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000302s ]
+NOTIC: [8] Undefined variable: error D:\Dev Apps\xampp\htdocs\sunyan2015\017\Application\Runtime\Cache\Home\e2f1e8739761dd1b07196da7c9136d50.php 第 25 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042070s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042251s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001882s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002028s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002623s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002811s ]
+
+[ 2015-08-22T09:01:16+08:00 ] 127.0.0.1 /sunyan2015/017/index.php/Home/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002279s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002418s ]
+SQL: SHOW COLUMNS FROM `usermessage` [ RunTime:0.0489s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000183s ]
+NOTIC: [8] Undefined variable: error D:\Dev Apps\xampp\htdocs\sunyan2015\017\Application\Runtime\Cache\Home\ccea6a400660ce54d68cab67b9f68781.php 第 26 行.
+NOTIC: [8] Undefined variable: logout D:\Dev Apps\xampp\htdocs\sunyan2015\017\Application\Runtime\Cache\Home\ccea6a400660ce54d68cab67b9f68781.php 第 27 行.
+NOTIC: [8] Undefined variable: error1 D:\Dev Apps\xampp\htdocs\sunyan2015\017\Application\Runtime\Cache\Home\ccea6a400660ce54d68cab67b9f68781.php 第 28 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021923s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022038s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000951s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001025s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001644s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001787s ]
+
+[ 2015-08-22T09:01:42+08:00 ] 127.0.0.1 /sunyan2015/017/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001008s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001804s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001912s ]
+SQL: SHOW COLUMNS FROM `usermessage` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `usermessage` WHERE ( name='孙岩' )  [ RunTime:0.0214s ]
+SQL: SELECT * FROM `usermessage` WHERE ( name='孙岩' and password='5500120sy' )  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: user_id D:\Dev Apps\xampp\htdocs\sunyan2015\017\Application\Home\Controller\IndexController.class.php 第 81 行.
+NOTIC: [8] Undefined index: user_id D:\Dev Apps\xampp\htdocs\sunyan2015\017\Application\Home\Controller\IndexController.class.php 第 83 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000119s ]
+NOTIC: [8] Undefined variable: logout D:\Dev Apps\xampp\htdocs\sunyan2015\017\Application\Runtime\Cache\Home\ccea6a400660ce54d68cab67b9f68781.php 第 27 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009707s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009797s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000525s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000568s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000796s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000844s ]
+
+[ 2015-08-22T09:01:47+08:00 ] 127.0.0.1 /sunyan2015/017/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000785s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001392s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001520s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000203s ]
+NOTIC: [8] Undefined variable: title D:\Dev Apps\xampp\htdocs\sunyan2015\017\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013649s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013795s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000830s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000896s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001476s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001550s ]
+
+[ 2015-08-22T09:01:50+08:00 ] 127.0.0.1 /sunyan2015/017/index.php/Home/Index/planlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001138s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002424s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002537s ]
+SQL: SHOW COLUMNS FROM `listmessage` [ RunTime:0.0726s ]
+SQL: SELECT `content`,`list_id` FROM `listmessage` WHERE ( user_id='' )  [ RunTime:0.0200s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000143s ]
+NOTIC: [8] Undefined variable: message D:\Dev Apps\xampp\htdocs\sunyan2015\017\Application\Runtime\Cache\Home\f647125f29b3235ccba45ea75a9696d9.php 第 10 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.085029s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.085106s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000953s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001036s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001766s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001910s ]
+
+[ 2015-08-22T09:03:51+08:00 ] 127.0.0.1 /sunyan2015/017/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000874s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001523s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001632s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000181s ]
+NOTIC: [8] Undefined variable: title D:\Dev Apps\xampp\htdocs\sunyan2015\017\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016699s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016850s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001369s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001474s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001766s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001858s ]
+
+[ 2015-08-22T09:03:54+08:00 ] 127.0.0.1 /sunyan2015/017/index.php/Home/Index/planlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000986s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001851s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001986s ]
+SQL: SHOW COLUMNS FROM `listmessage` [ RunTime:0.0085s ]
+SQL: SELECT `content`,`list_id` FROM `listmessage` WHERE ( user_id='' )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000352s ]
+NOTIC: [8] Undefined variable: message D:\Dev Apps\xampp\htdocs\sunyan2015\017\Application\Runtime\Cache\Home\f647125f29b3235ccba45ea75a9696d9.php 第 10 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019407s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019498s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000612s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000656s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000981s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001055s ]
+
+[ 2015-08-22T09:04:07+08:00 ] 127.0.0.1 /sunyan2015/017/index.php/Home/Index/changepassword.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000901s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001885s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002114s ]
+SQL: SHOW COLUMNS FROM `usermessage` [ RunTime:0.0095s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000300s ]
+NOTIC: [8] Undefined variable: error D:\Dev Apps\xampp\htdocs\sunyan2015\017\Application\Runtime\Cache\Home\bd86132f2816cb51224fd7caaf81f3ad.php 第 20 行.
+NOTIC: [8] Undefined variable: error1 D:\Dev Apps\xampp\htdocs\sunyan2015\017\Application\Runtime\Cache\Home\bd86132f2816cb51224fd7caaf81f3ad.php 第 22 行.
+NOTIC: [8] Undefined variable: error2 D:\Dev Apps\xampp\htdocs\sunyan2015\017\Application\Runtime\Cache\Home\bd86132f2816cb51224fd7caaf81f3ad.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026855s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027061s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001905s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002046s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003020s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003188s ]
+
+[ 2015-08-22T09:26:37+08:00 ] 127.0.0.1 /sunyan2015/017/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000645s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000992s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+NOTIC: [8] Undefined variable: title D:\Dev Apps\xampp\htdocs\sunyan2015\017\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008786s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008836s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000534s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000573s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000828s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000871s ]
+
+[ 2015-08-22T09:26:46+08:00 ] 127.0.0.1 /sunyan2015/017/index.php/Home/Index/changepassword.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000982s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001472s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001593s ]
+SQL: SHOW COLUMNS FROM `usermessage` [ RunTime:0.0079s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000279s ]
+NOTIC: [8] Undefined variable: error D:\Dev Apps\xampp\htdocs\sunyan2015\017\Application\Runtime\Cache\Home\bd86132f2816cb51224fd7caaf81f3ad.php 第 20 行.
+NOTIC: [8] Undefined variable: error1 D:\Dev Apps\xampp\htdocs\sunyan2015\017\Application\Runtime\Cache\Home\bd86132f2816cb51224fd7caaf81f3ad.php 第 22 行.
+NOTIC: [8] Undefined variable: error2 D:\Dev Apps\xampp\htdocs\sunyan2015\017\Application\Runtime\Cache\Home\bd86132f2816cb51224fd7caaf81f3ad.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017169s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017298s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001132s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001222s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001647s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001739s ]
+
+[ 2015-08-22T09:26:54+08:00 ] 127.0.0.1 /sunyan2015/017/index.php/Home/Index/changepassword
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000971s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001369s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001492s ]
+SQL: SHOW COLUMNS FROM `usermessage` [ RunTime:0.0089s ]
+SQL: UPDATE `usermessage` SET `password`='234' WHERE ( user_id='' ) [ RunTime:0.1164s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000335s ]
+NOTIC: [8] Undefined variable: error1 D:\Dev Apps\xampp\htdocs\sunyan2015\017\Application\Runtime\Cache\Home\bd86132f2816cb51224fd7caaf81f3ad.php 第 22 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024851s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001516s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001657s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003022s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003233s ]
+
+[ 2015-08-22T10:08:51+08:00 ] 127.0.0.1 /sunyan2015/017/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000945s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001559s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001687s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000192s ]
+NOTIC: [8] Undefined variable: title D:\Dev Apps\xampp\htdocs\sunyan2015\017\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016326s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016477s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001051s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001137s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001645s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001738s ]
+
+[ 2015-08-22T10:08:55+08:00 ] 127.0.0.1 /sunyan2015/017/index.php/Home/Index/changepassword.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001735s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001884s ]
+SQL: SHOW COLUMNS FROM `usermessage` [ RunTime:0.0093s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000306s ]
+NOTIC: [8] Undefined variable: error D:\Dev Apps\xampp\htdocs\sunyan2015\017\Application\Runtime\Cache\Home\bd86132f2816cb51224fd7caaf81f3ad.php 第 20 行.
+NOTIC: [8] Undefined variable: error1 D:\Dev Apps\xampp\htdocs\sunyan2015\017\Application\Runtime\Cache\Home\bd86132f2816cb51224fd7caaf81f3ad.php 第 22 行.
+NOTIC: [8] Undefined variable: error2 D:\Dev Apps\xampp\htdocs\sunyan2015\017\Application\Runtime\Cache\Home\bd86132f2816cb51224fd7caaf81f3ad.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025488s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025606s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001134s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001227s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002018s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002120s ]
+
+[ 2015-08-22T10:08:57+08:00 ] 127.0.0.1 /sunyan2015/017/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000935s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001499s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001595s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000183s ]
+NOTIC: [8] Undefined variable: title D:\Dev Apps\xampp\htdocs\sunyan2015\017\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012927s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013013s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000852s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000919s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002249s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002357s ]
+
+[ 2015-08-22T10:08:59+08:00 ] 127.0.0.1 /sunyan2015/017/index.php/Home/Index/planlist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000430s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000735s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000787s ]
+SQL: SHOW COLUMNS FROM `listmessage` [ RunTime:0.0118s ]
+SQL: SELECT `content`,`list_id` FROM `listmessage` WHERE ( user_id='' )  [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000166s ]
+NOTIC: [8] Undefined variable: message D:\Dev Apps\xampp\htdocs\sunyan2015\017\Application\Runtime\Cache\Home\f647125f29b3235ccba45ea75a9696d9.php 第 10 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024255s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024391s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000825s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000912s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001420s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001541s ]
+
+[ 2015-08-22T10:09:09+08:00 ] 127.0.0.1 /sunyan2015/017/index.php/Home/Index/planlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000885s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001527s ]
+SQL: SHOW COLUMNS FROM `listmessage` [ RunTime:0.0109s ]
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null
+
+[ 2015-08-22T10:09:39+08:00 ] 127.0.0.1 /sunyan2015/017/index.php/Home/Index/planlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001624s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001454s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001574s ]
+SQL: SHOW COLUMNS FROM `listmessage` [ RunTime:0.0099s ]
+SQL: DELETE FROM `listmessage` WHERE ( list_id='74' ) [ RunTime:0.0783s ]
+SQL: SELECT `content`,`list_id` FROM `listmessage` WHERE ( user_id='' )  [ RunTime:0.0032s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000280s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032466s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032644s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001032s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001126s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001912s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002003s ]
+
+[ 2015-08-22T10:09:51+08:00 ] 127.0.0.1 /sunyan2015/017/index.php/Home/Index/planlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000571s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001213s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001323s ]
+SQL: SHOW COLUMNS FROM `listmessage` [ RunTime:0.0096s ]
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null
+
+[ 2015-08-22T19:43:44+08:00 ] 127.0.0.1 /sunyan2015/017/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.041563s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.035311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.035501s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+NOTIC: [8] Undefined variable: title D:\Dev Apps\xampp\htdocs\sunyan2015\017\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 5 行.
+NOTIC: [8] Undefined variable: link3 D:\Dev Apps\xampp\htdocs\sunyan2015\017\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 16 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.222077s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.222181s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.179133s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.179237s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.027929s ]
+INFO: [ app_end ] --END-- [ RunTime:0.028116s ]
+
+[ 2015-08-22T21:29:36+08:00 ] 127.0.0.1 /sunyan2015/022/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015682s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.013550s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013702s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000267s ]
+NOTIC: [8] Undefined variable: title D:\Dev Apps\xampp\htdocs\sunyan2015\022\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 5 行.
+NOTIC: [8] Undefined variable: link3 D:\Dev Apps\xampp\htdocs\sunyan2015\022\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 16 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.068518s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.068620s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.017176s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.017266s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005154s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005223s ]
+

@@ -1,0 +1,37 @@
+<nav class="navbar navbar-default" role="navigation">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="#">顺序&nbsp&nbsp</a>
+		<a class="navbar-brand" href="#">热门&nbsp&nbsp&nbsp&nbsp</a>
+		<a class="navbar-brand" href="#">
+			<form action=" <%=request.getContextPath() %>/search" method="post">
+				<div class="input-group">
+					<input type="text" name="searchContent" class="form-control ">
+						<span class="input-group-addon button glyphicon glyphicon-zoom-out btn btn-success">	</span>
+				</div>					
+			</form>&nbsp&nbsp&nbsp&nbsp
+		</a>
+		<div class="dropdown navbar-brand">
+			<a class="dropdown-toggle" data-toggle="dropdown">
+				<span class="glyphicon glyphicon-user" >
+					<span class="caret"></span>
+				</span>
+			</a>
+			<ul class="dropdown-menu" role="menu">
+				<li role="presentation">
+					<a tabindex="-1" role="menuitem" href="./logout.php">提笔写篇文章</a>
+				</li>
+				<li role="presentation">
+					<a tabindex="-1" role="menuitem" href="./logout.php">我的主页</a>
+				</li>
+				<li role="presentation">
+					<a tabindex="-1" role="menuitem" href="./user/logout.php">注销</a>
+				</li>
+				<li role="presentation">
+					<a tabindex="-1" role="menuitem"  href="./changepassword.php">修改密码</a>
+				</li>								
+			</ul>			
+		</div>
+	</div>
+</nav>		
+
+	

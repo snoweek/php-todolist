@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="entity" catalog="design">
+	<class name="Student" table="student">
+		<!-- hibernate必须设置主键 -->
+		<id name="id" type="int" column="id">
+			<!-- 适合于mysql、DB2、SQLServer，就是auto increment -->
+			<generator class="identity" />
+		</id>
+		<!-- 1、对象的属性类型与关系的字段类型一致可以省略type 2、对象的属性名与关系的字段名相同可以省略column -->
+		<property name="name" column="name" length="20" />
+		<property name="gender" column="gender"/>		
+		<many-to-one name="major" class="Major" column="major_id" lazy="false" />
+	</class>
+</hibernate-mapping>  
+ 
+ 
+ 
+ 
+    

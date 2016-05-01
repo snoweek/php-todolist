@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>写文章</title>
+  
+    <script  type="text/javascript" src="./public/bootstrap/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="./public/bootstrap/js/bootstrap.min.js"></script>
+   
+
+</head>
+<body>
+         
+                <div id="a">
+                        <input type="button" value="提交 " id="submit_artical">　   
+                      <?php 
+                        print "<input type=\"hidden\" id=\"work_id\" value=\"1\">";
+                 print "<input type=\"hidden\" name=\"work_id\" id=\"work_id\" value=\""+1+"\"> ";
+                      ?>
+                  </div>        
+            <span id="message"></span>                                                                                          
+        </div>
+        <script type="text/javascript">
+                    $(function(){
+                      $("#submit_artical").click(function(){
+                        var id=$("#work_id").val();
+                          $("#message").text("nqpeor"+id);
+
+                      });
+                        
+                        
+                    });
+         </script>
+        
+</body>
+</html>

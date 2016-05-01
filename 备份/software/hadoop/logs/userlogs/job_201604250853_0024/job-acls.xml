@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><configuration>
+<property><!--Loaded from Unknown--><name>user.name</name><value>sunyan</value></property>
+<property><!--Loaded from Unknown--><name>mapred.job.queue.name</name><value>default</value></property>
+<property><!--Loaded from Unknown--><name>mapreduce.job.acl-view-job</name><value> </value></property>
+<property><!--Loaded from Unknown--><name>mapred.queue.default.acl-administer-jobs</name><value>*</value></property>
+</configuration>

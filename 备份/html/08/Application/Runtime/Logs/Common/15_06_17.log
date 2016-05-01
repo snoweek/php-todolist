@@ -1,0 +1,30 @@
+[ 2015-06-17T10:05:40+08:00 ] 127.0.0.1 /sunyan2015/017/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000731s ]
+ERR: 无法加载模块:Register
+
+[ 2015-06-17T15:53:07+08:00 ] 127.0.0.1 /sunyan2015/017/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001382s ]
+ERR: 无法加载模块:Login
+
+[ 2015-06-17T15:57:07+08:00 ] 127.0.0.1 /sunyan2015/017/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001384s ]
+ERR: 无法加载模块:Login
+
+[ 2015-06-17T15:57:24+08:00 ] 127.0.0.1 /sunyan2015/017/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001439s ]
+ERR: 无法加载模块:Login
+
+[ 2015-06-17T15:57:44+08:00 ] 127.0.0.1 /sunyan2015/017/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001724s ]
+ERR: 无法加载模块:Login
+

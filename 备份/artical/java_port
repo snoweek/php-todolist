@@ -1,0 +1,9 @@
+
+
+查看运行的端口号
+ netstat -lnptu
+停止正在运行的进程
+kill 
+
+//export HADOOP_HOME_WARN_SUPPRESS=1
+

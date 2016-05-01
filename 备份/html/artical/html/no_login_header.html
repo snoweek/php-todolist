@@ -1,0 +1,17 @@
+<nav class="navbar navbar-default" role="navigation">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="#">顺序&nbsp&nbsp</a>
+		<a class="navbar-brand" href="#">热门&nbsp&nbsp&nbsp&nbsp</a>
+		<a class="navbar-brand" href="#">
+			<form action=" <%=request.getContextPath() %>/search" method="post">
+					<div class="input-group">
+						<input type="text" name="searchContent" class="form-control ">
+							<span class="input-group-addon button glyphicon glyphicon-zoom-out btn btn-success">						
+						</span>
+					</div>					
+				</form>&nbsp&nbsp&nbsp&nbsp
+		</a>
+		<a class="navbar-brand" href="login.php"><span class="glyphicon glyphicon-step-forward">登录&nbsp&nbsp</span></a>
+		<a class="navbar-brand" href="register.php"><span class="glyphicon glyphicon-user">注册</span></a>
+	</div>
+</nav>		

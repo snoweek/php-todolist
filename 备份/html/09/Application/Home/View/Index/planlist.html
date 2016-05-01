@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>计划列表</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="__PUBLIC__/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script  type="text/javascript" src="__PUBLIC__/js/jquery-1.7.2.min"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/bootstrap.min.js"></script>
+</head>
+    <body>
+    	<h2 align="center">{$username}欢迎来到你的文章列表</h2>
+    	{$message}
+    	<table class="table table-responsive">
+    	<foreach name="select" item="list">
+    		<tr>
+    			<td>
+    				{$list.artical_title}
+    				<form action="planlist" method="POST">
+                		<input type="hidden" name="listhidden" value="{$list.artical_id}" />
+                		<input type="submit" value="删除" />
+                    <input type="submit" value="编辑" />
+            </form>
+    			</td>
+    		</tr>
+    	</foreach>
+     </table>
+        <div class="container">
+            <table class="table">
+                <caption>Table 基本案例</caption>
+                <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>User Name</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>aehyok</td>
+                    <td>leo</td>
+                    <td>@aehyok</td>
+                </tr>
+                <tr>
+                    <td>lynn</td>
+                    <td>thl</td>
+                    <td>@lynn</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        </br>
+        <a href="{:U('Home/Index/changepassword')}">更改密码</a>
+        <br />
+        <a href="{:U('Home/Index/index')}">返回首页</a>
+    </br>
+    <a href="{:U('Home/Index/logout')}">注销</a>
+    </br>
+    <a href="{:U('Home/Index/writer')}">写文章</a>
+    </body>
+</html>

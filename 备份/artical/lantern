@@ -1,0 +1,14 @@
+1.下载lantern的ubuntu版本，其文件格式是deb
+2进入命令行后，进入lantern的存储位置，如，我的电脑是 
+$ cd Downloads/
+3. $  sudo dpkg -i lantern-installer-beta-64-bit.deb
+这样，lantern我们就安装完毕了
+在search里面输入lantern,会出现其图标，点击后，浏览器就会出现lantern的欢迎页面。
+
+
+deb是Debian软件包格式，文件扩展名为.deb。Debian包是Unixar的标准归档，将包文件信息以及包内容，经过gzip和tar打包而成。
+
+处理这些包的经典程序是dpkg，经常是通过apt来运作。
+
+通过Alien工具，可以将deb包转换成其他形式的软件包，如rpm、tar.gz格式。
+

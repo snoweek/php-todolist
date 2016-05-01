@@ -1,0 +1,94 @@
+![](./example/gradual.png)
+
+
+
+# php-todolist
+进入todolist的目录
+
+echo "# php-todolist" >> README.md
+git init
+git add README.md
+git add .#
+git commit -m "first commit"
+git remote add origin https://github.com/snoweek/php-todolist.git
+git push -u origin master
+
+
+
+git add .#
+git commit -m "first commit"
+git push -u origin master
+
+
+
+
+or create a new repository on the command line
+
+echo "# java_searchenginee" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/snoweek/java_search_engine.git
+git push -u origin master
+
+…or push an existing repository from the command line
+
+git remote add origin https://github.com/snoweek/java_searchenginee.git
+git push -u origin master
+
+
+
+echo "# java_searchenginee" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/snoweek/java_student_major.git
+git push -u origin master
+
+
+
+or create a new repository on the command line
+
+echo "# java_socket" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/snoweek/java_socket.git
+git push -u origin master
+
+…or push an existing repository from the command line
+
+git remote add origin https://github.com/snoweek/java_socket.git
+git push -u origin master
+
+
+My blog http://snoweek.github.io/
+
+## init 
+
+```
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/snoweek/nodejs_staticfile.git
+git push -u origin master
+```
+
+## update
+
+```
+git add .
+git commit -m "update"
+git push -u origin master
+```
+
+## clone
+```
+git clone https://github.com/snoweek/snoweek.github.io.git
+```
+##remove
+git rm test.txt
+
+git commit -m "remove test.txt"
+
+
