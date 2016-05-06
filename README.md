@@ -26,7 +26,7 @@ CREATE TABLE `user` (
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `name` (`name`),
   UNIQUE KEY `email` (`email`)
-)
+)ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8; 
 ```
 表user包含四列，user_id记录用户注册的顺序，同时用作主键;name记录用户的名称;password记录用户的密码;email记录用户的邮箱。
 
@@ -38,7 +38,7 @@ CREATE TABLE `list` (
   `content` text,
   `user_id` mediumint(8) DEFAULT NULL,
   PRIMARY KEY (`list_id`)
-) 
+)ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;  
 ```
 表list包含三列，list_id用于记录计划的条数;content用于记录计划的内容;
 user_id是指这条计划所属的用户。两个表之间以user_id来连接。
