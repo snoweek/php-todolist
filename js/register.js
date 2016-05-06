@@ -32,6 +32,15 @@ $(function(){
 			$("#span_password_error").text("");	
 		}	
 	});
+	$("#confirm_password").blur(function(){		
+			var confirm_password=$("#confirm_password").val();
+			var password=$("#input_password").val();
+			if(confirm_password!=password){
+				$("#confirm_password_error").text("两次密码输入不一致");
+			}else{
+				$("#confirm_password_error").text(" ");
+			}					
+		});
 	$("#input_email").blur(function(){
 		var regex = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
 		if (!regex.test($("#input_email").val())) {

@@ -57,6 +57,18 @@
                         <div class="row">
                             <div class="col-lg-6 col-sm-6 col-sm-6">
                                 <div class="input-group input-lg">
+                                   <span class="input-group-addon glyphicon glyphicon-lock"></span>
+                                    <input type="password" id="confirm_password" name="confirm_password" class="form-control input-sm" placeholder="请确认新密码"/>
+                                </div>
+                            </div>                                
+                            <div class="col-lg-6 col-sm-6 col-sm-6">
+                            <br>
+                                <div><span id="confirm_password_error" style="color: red;"></span></div>   
+                            </div>
+                        </div>      
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-6 col-sm-6">
+                                <div class="input-group input-lg">
                                     <span class="input-group-addon glyphicon glyphicon-envelope"></span>
                                     <input type="text" id="input_email" name="email" class="form-control input-sm" placeholder="请输入邮箱"/> 
                                  </div>                  
